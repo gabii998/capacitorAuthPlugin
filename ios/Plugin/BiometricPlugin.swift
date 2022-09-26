@@ -10,9 +10,6 @@ public class BiometricPlugin: CAPPlugin {
     private let implementation = Biometric()
 
     @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+        BiometricUtil().login(call)
     }
 }

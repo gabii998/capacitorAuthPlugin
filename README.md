@@ -5,7 +5,7 @@ Plugin para autenticar con metodos biometricos
 ## Install
 
 ```bash
-npm install surtech-biometric-auth
+npm install multiplatform-biometric-auth
 npx cap sync
 ```
 

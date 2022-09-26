@@ -1,8 +1,8 @@
 import Foundation
+import Capacitor
 
 @objc public class Biometric: NSObject {
-    @objc public func echo(_ value: String) -> String {
-        print(value)
-        return value
+    @objc public func echo(_ call: CAPPluginCall) {
+        
     }
 }

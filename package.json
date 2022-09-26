@@ -1,6 +1,6 @@
 {
-  "name": "surtech-biometric-auth",
-  "version": "0.0.1",
+  "name": "multiplatform-biometric-auth",
+  "version": "0.0.2",
   "description": "Plugin para autenticar con metodos biometricos",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
