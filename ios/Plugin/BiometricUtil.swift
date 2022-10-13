@@ -11,6 +11,22 @@ import LocalAuthentication
 import Capacitor
 
 class BiometricUtil{
+    func deviceSupportBiometricAuthentication(_ call: CAPPluginCall){
+        let context = LAContext()
+        context.localizedFallbackTitle = "Authenticate with your face"
+        var authError:NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+            call.resolve([
+                "value": true
+            ])
+        }else{
+            call.resolve([
+                "value": false
+            ])
+        }
+    }
+    
     func login(_ call: CAPPluginCall) {
         let context = LAContext()
         context.localizedFallbackTitle = "Authenticate with your face"

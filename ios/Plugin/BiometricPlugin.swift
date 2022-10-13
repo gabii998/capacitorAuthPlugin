@@ -12,4 +12,10 @@ public class BiometricPlugin: CAPPlugin {
     @objc func echo(_ call: CAPPluginCall) {
         BiometricUtil().login(call)
     }
+    
+    @objc func deviceSupportBiometricLogin(_ call: CAPPluginCall){
+        BiometricUtil().deviceSupportBiometricAuthentication(call)
+    }
+    
+    
 }
